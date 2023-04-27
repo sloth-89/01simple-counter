@@ -1,0 +1,5 @@
+1. store.js를 index.js에 연동 (configureStore)
+2. UI에 관한 컴포넌트 작성 (Counter.js)
+3. App.js에 위 컴포넌트 import
+4. counter.js로 기능 구현 컴포넌트(createSlice)를 만들어 Counter.js에 연결 (useSelector, useDispatch)
+5. store.js에 다 연결해준다.
