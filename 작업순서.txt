@@ -1,5 +1,43 @@
+state : 데이터 상태 (초기데이터값, 이후 업데이트 되는 데이터값)
+dispatch : action 개체를 가지고 있다.(type)
+
+패턴
+initialState(0) ----> dispatch -- (실행) --> 
+reducer 업데이트 함수 ----> 새로운 state 값
+
 1. store.js를 index.js에 연동 (configureStore)
 2. UI에 관한 컴포넌트 작성 (Counter.js)
 3. App.js에 위 컴포넌트 import
 4. counter.js로 기능 구현 컴포넌트(createSlice)를 만들어 Counter.js에 연결 (useSelector, useDispatch)
 5. store.js에 다 연결해준다.
+
+// export default로 모듈을 내보낸다면 export한 이름과 상관없이 원하는 이름으로 import가 가능하다.(다른 이름으로 변경가능)
+// 그리고 중괄호 작성이 필요하지 않다.
+// default가 아닐 시 중괄호 작성 필요
+// 경로 파일에 컴포넌트가 여러개일 경우 default는 꼭 하나여야만 한다.
+
+// named export : export한 이름으로만 가져올 수 있고, 
+어떤 것을 import하는지 정확히 알 수 있다.
+// export default : export한 이름이 아닌 원하는 이름으로 import할 수 있지만 
+import하는 대상이 명확하지 않으므로 팀원과 함께 할때는 이름을 일치 시키는게 좋다.
+
+export default
+ 1. 일반적으로 해당 모듈엔 하나의 개체(변수, 클래스, 함수)만 있다는 의미로 받아들여진다.
+ 2. 따라서 해당 모듈의 전체 개체를 export한다는 의미를 갖는다. 
+ 3. 원하는 이름으로 import가 가능하다
+
+export
+ 1. 복수의 개체가 있는 라이브러리 형태의 모듈에서 가져오기 할 때 사용
+ 2. 특정 개체만 가져오는게 가능
+ 3. 원하는 이름으로 import 불가능
+
+각각의 컴포넌트 앞에 export를 붙여 내보낼수도 있지만
+export {}를 활용하여 한번에 내보내기도 가능.
+
+import 시에도 {}안에 넣어 가져오기
+전체를 import 할시에는 *를 활용
+
+as 뒤에 별칭을 붙임으로 이름을 바꿔 사용할 수 있다.
+
+
+
